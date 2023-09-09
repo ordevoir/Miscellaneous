@@ -1,5 +1,5 @@
 ## Генерация SSH-ключа
-Прежде всего, для безопасной работы, следует сгенерировать SSH-ключ. Инструкция описана [здесь](https://practicum.yandex.ru/trainer/git-basics/lesson/42435683-0922-4231-bfb4-d7d32d61f50a/)
+Прежде всего, для безопасной работы, следует сгенерировать SSH-ключ. Инструкция описана [Яндекс Практикуме](https://practicum.yandex.ru/trainer/git-basics/lesson/42435683-0922-4231-bfb4-d7d32d61f50a/) и [здесь](https://only-to-top.ru/blog/tools/2019-12-08-git-ssh-windows.html).
 
 -------------------
 
@@ -79,7 +79,3 @@
 `git merge new_br`
 
 `git branch -d new_br` - удалить ветку `new_br` (на самом github ветка при этом еще не удаляется)
-
-
-git add .
-

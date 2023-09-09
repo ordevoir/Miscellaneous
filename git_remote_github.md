@@ -76,6 +76,8 @@
 `origin  git@github.com:ordevoir/bash_and_git.git (fetch)`
 `origin  git@github.com:ordevoir/bash_and_git.git (push)`
 
+`git remote remove origin` - удаление репозитория из списка
+
 -------------------------------------------
 
 ## Отправка изменения на удалённый репозиторий
@@ -99,7 +101,7 @@
 
 Следует иметь в виду, что `pull` производит также слияние, поэтому следует удостовериться, что в локальном репозитории проивзеден коммит.
 
-`git remote remove maxwell` - удаление сервера из списка
+---
 
 `git branch` - показывает ветки (`*` текущая ветка)
 `git branch new_br` - создает ветку `new_br`

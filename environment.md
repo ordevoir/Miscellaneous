@@ -50,25 +50,25 @@
 
 перезапустить powershell
 
+---
+
 ## Сreate environments with **virtualenv**
 
 `pip inatall virtualenv`
 
-Create a new virtual environment by choosing a Python interpreter and making a .\venv directory to hold it:
+Create a new virtual environment by choosing a Python interpreter and making a `.\venv` directory to hold it:
 
-virtualenv --system-site-packages -p python3 ./venv
+`virtualenv --system-site-packages -p python3 ./venv`
 
 Activate the virtual environment:
 
-.\venv\Scripts\activate
+`.\venv\Scripts\activate`
 
 Install packages within a virtual environment without affecting the host system setup. Start by upgrading pip:
 
-pip install --upgrade pip
-pip list  # show packages installed within the virtual environment
+`pip install --upgrade pip`
+`pip list`  # show packages installed within the virtual environment
 
 And to exit virtualenv later:
 
-deactivate  # don't exit until you're done using TensorFlow
-
-
+`deactivate`  # don't exit until you're done using TensorFlow

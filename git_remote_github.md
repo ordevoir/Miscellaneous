@@ -1,5 +1,5 @@
 ## Генерация SSH-ключа
-Прежде всего, для безопасной работы, следует сгенерировать SSH-ключ. Инструкция описана в [здесь]([SSH-key_generation.htm](https://practicum.yandex.ru/trainer/git-basics/lesson/42435683-0922-4231-bfb4-d7d32d61f50a/)l)
+Прежде всего, для безопасной работы, следует сгенерировать SSH-ключ. Инструкция описана [здесь](https://practicum.yandex.ru/trainer/git-basics/lesson/42435683-0922-4231-bfb4-d7d32d61f50a/)
 
 -------------------
 

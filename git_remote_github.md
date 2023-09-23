@@ -112,7 +112,7 @@
 `git checkout -b new_br` - создает ветку `new_br` и сразу переходит на нее
 
 для того чтобы влить ветку `new_br` в основную ветку `master`, нужно сначала перейти в ветку `master`:
-`git checkout master` и затем выполнить `merge`:
+`git checkout master` и затем выполнить слияние:
 `git merge new_br`
 
 `git branch -d new_br` - удалить ветку `new_br` (на самом github ветка при этом еще не удаляется)

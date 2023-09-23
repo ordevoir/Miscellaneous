@@ -1,5 +1,7 @@
 ## Сreate environments with **conda**
 
+В общем случае задача заключается в построении модели, способной классифицировать образцы ирисов на три класса, по заданным четырем признакам. Но для начала мы упростим задачу. Модель должна будет производить бинарную классификацию: разбивать образцы всего на два класса - "virginica" и "not verginica". Первый класс будем называть <span style="color: green"> "положительным"</span> $\oplus$, а второй - <span style="color: orange">"отрицательным" </span> $\ominus$. Создадим для этого новый массив меток, который будет содержать значения `1` для образцов положительного класса, т.е. для ирисов вида virginica и `-1` для образцов отрицательного класса, т.е. для остальных ирисов.
+
 [Подробная инструкция](https://conda.io/projects/conda/en/latest/user-guide/tasks/manage-environments.html#activating-an-environment)
 
 `conda update conda` - желательно обновить conda перед созданием окружения
@@ -8,7 +10,7 @@
 
 `conda create --name envname python=x.x`
 
-<span style=": green">Клонирование</span> доругого окружения:
+Клонирование доругого окружения:
 
 `conda create -n envname --clone someenv`
 

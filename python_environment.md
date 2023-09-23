@@ -8,7 +8,7 @@
 
 `conda create --name envname python=x.x`
 
-Клонирование доругого окружения:
+<span style="color='green'">Клонирование</span> доругого окружения:
 
 `conda create -n envname --clone someenv`
 

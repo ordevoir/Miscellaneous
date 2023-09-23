@@ -22,7 +22,7 @@ pip install jupyter
 
 и нажмите Enter. Пакетный менеджер установит Jupyter Notebook. Теперь можно открыть в VS Code файл jupyter_example.ipynb. Файлы, написанные для Jupyter Notebook имеют расширение *.ipynb. Редактор VS Code предложит установить плагин Jupyter. После установки можно свободно работь с файлами этого формата в редакторе VS Code.
 
-## PowerShell and pip
+## [PowerShell and pip]
 * pip - представляет собой пакетный менеджер при помощи которого устанавливаются сторонние библиотеки для интерпретатора python.
 
 ** для того, чтобы открыть командную строку (или PowerShell) в Windows нажмите комбинацию Win+R, пропишите cmd (или powershell) и нажмите Enter

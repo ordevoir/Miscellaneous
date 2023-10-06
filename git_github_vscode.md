@@ -1,5 +1,5 @@
 ## Работа в терминале (Git Bash)
-
+Download for [Windows](https://git-scm.com/download/win), [macOS](https://git-scm.com/download/mac), [Linux](https://git-scm.com/download/linux)
 ---
 
 ### Глобальные настройки

@@ -153,3 +153,7 @@ class LinkedList():
         if self.length == 0:
             text = '[]'
         return text
+    
+
+def print_something():
+    print('A')

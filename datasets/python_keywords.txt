@@ -1,0 +1,10 @@
+print
+len
+is
+in
+while
+for
+from
+if
+else
+elif

@@ -27,7 +27,7 @@ def getDTstr(value):
 
 
 
-print('Start ordeding...')
+print('Start ordering...')
 
 files = getFiles()
 filesCount = 0
@@ -74,7 +74,7 @@ for file in files:
             
         os.replace(file, '%s/%s' % (folderName, str(dt.year) +'-'+ month +'-'+ day +'_'+ hour +'-'+ minute +'-'+ second +'_' + file[-5:])) # перемещение
 
-print("Files are ordeded!")
+print("Files are ordered!")
 print(dirsCount, "dirs created")
 print(filesCount, "files moved")
 

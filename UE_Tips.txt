@@ -1,0 +1,19 @@
+LBM – вращение камеры вокруг своей оси
+RBM
+
+
+отображение fps:
+    cmd => stat fps
+
+открыть cmd в режиме игры можно клавишей ~
+
+увеличение fps:
+Edit => Project Settings
+    Rendering
+        отключаем:
+        Dynamic Global Illumination Method: None
+        Reflection Method:                  None
+        Shadow Map Method:                  Shadow Maps
+
+исправление запекания теней после перемещения объектов:
+Build: Build Lightning Only

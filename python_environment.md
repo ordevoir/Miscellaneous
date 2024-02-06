@@ -2,7 +2,7 @@
 
 [Подробная инструкция](https://conda.io/projects/conda/en/latest/user-guide/tasks/manage-environments.html#activating-an-environment)
 
-`conda update conda` - желательно обновить conda перед созданием окружения
+`conda update conda` – желательно обновить conda перед созданием окружения
 
 Для чистой установки c заданной версией python (вместо `--name` можно писать `-n`):
 
@@ -23,9 +23,9 @@
 `conda create -n envname python=x.x anaconda`
 (with anaconda's packages)
 
-`conda activate envname` - активация окружения envname
+`conda activate envname` – активация окружения envname
 
-`conda deactivate` - деактивация окружения
+`conda deactivate` – деактивация окружения
 
 Установка пакета в заданное окружение:
 

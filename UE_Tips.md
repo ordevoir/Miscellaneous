@@ -25,6 +25,10 @@
 
 `Mouse Wheel` – zoom
 
+`Mouse Wheel Button` – shifting
+
+
+
 ## Projection
 
 `RBM` – сдвиг по сцене

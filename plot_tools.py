@@ -18,8 +18,9 @@ def show_image(image: np.ndarray, title=None, size=8,
     plt.show()
 
 
-def show_image_bgr(image: np.ndarray, title=None, size=8, **options):
-    show_image(bgr2rgb(image), title, size, **options)
+def show_image_bgr(image: np.ndarray, title=None, size=8, 
+                   facecolor="gray", **options):
+    show_image(bgr2rgb(image), title, size, facecolor, **options)
 
 def show_images(images, titles=None, n_cols=2, size=4, facecolor="gray", **options):
 

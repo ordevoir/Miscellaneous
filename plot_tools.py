@@ -3,6 +3,7 @@ import matplotlib.pyplot as plt
 
 FACECOLOR = "#333"
 FONTCOLOR = "#CCC"
+AUTO = "auto"
 
 def bgr2rgb(image):
     """returns image with exchanged 3rd and 1st channels"""
@@ -13,6 +14,24 @@ def bgr2rgb(image):
     return image_rgb
 
 
+# Get names of variables as string of list if stirngs
+# ---------------------------------------------------
+
+def get_name_of_variable(var):
+    g = globals()
+    keys = g.keys()
+    for key in keys:
+        if globals()[key] is var and not key.startswith('_'):
+            return key
+        
+def get_names_of_variables(vars):
+    names = []
+    for var in vars:
+        name = get_name_of_variable(var)
+        names.append(name)
+    return names   
+
+
 # Visualize single image
 # ----------------------
 
@@ -20,9 +39,11 @@ def show_image(image: np.ndarray, title=None, size=8,
                 facecolor=FACECOLOR, color=FONTCOLOR, **options):
     """Visualize single RGB or monochromatic image"""
 
+    if title == AUTO:
+        title = get_name_of_variable(image)
+
     # for 1 channel image:
     rank = len(image.shape)
-    print(f"{rank = }")
     if rank == 2 or image.shape[2] == 1:
         options["cmap"] = "gray"
     
@@ -35,6 +56,8 @@ def show_image(image: np.ndarray, title=None, size=8,
 def show_image_bgr(image: np.ndarray, title=None, size=8, 
                    facecolor=FACECOLOR, color=FONTCOLOR, **options):
     """Visualize single BGR image"""
+    if title == AUTO:
+        title = get_name_of_variable(image)
     show_image(bgr2rgb(image), title, size, facecolor, color, **options)
 
 
@@ -45,7 +68,9 @@ def show_images(images, titles=None, n_cols=2, size=4,
                 facecolor=FACECOLOR, color=FONTCOLOR, **options):
     """Visualize multiple RGB or monochromatic images"""
 
-    if titles is not None:
+    if titles == AUTO:
+        titles = get_names_of_variables(images)
+    elif titles:
         assert len(titles) == len(images), "images count and titles count must be same"
 
     ratio = images[0].shape[0] / images[0].shape[1]     # height / width
@@ -103,7 +128,11 @@ def show_images(images, titles=None, n_cols=2, size=4,
 def show_images_bgr(images, titles=None, n_cols=2, size=4, 
                     facecolor=FACECOLOR, color=FONTCOLOR, **options):
     """Visualize multiple BGR images"""
+    if titles == AUTO:
+        titles = get_names_of_variables(images)
+        print(f"{titles = }")
     images_rgb = []
     for image in images:
         images_rgb.append(bgr2rgb(image))
     show_images(images_rgb, titles, n_cols, size, facecolor, color, **options)
+

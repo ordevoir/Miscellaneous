@@ -18,7 +18,7 @@ def show_image(image: np.ndarray, title=None, size=8,
     plt.show()
 
 
-def show_image_bgr(image: np.ndarray, title=None, figsize=8, **options):
+def show_image_bgr(image: np.ndarray, title=None, size=8, **options):
     show_image(bgr2rgb(image), title, size, **options)
 
 def show_images(images, titles=None, n_cols=2, size=4, facecolor="gray", **options):
@@ -69,5 +69,3 @@ def show_images_bgr(images, titles=None, n_cols=2, size=4, facecolor="gray", **o
     for image in images:
         images_rgb.append(bgr2rgb(image))
     show_images(images_rgb, titles, n_cols, size, facecolor, **options)
-
-show_images_bgr((original2, ), titles=('asdf',), n_cols=2)

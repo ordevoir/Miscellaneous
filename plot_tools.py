@@ -19,6 +19,7 @@ def bgr2rgb(image):
 
 def get_name_of_variable(var):
     g = globals()
+    print(f"{g = }")
     keys = g.keys()
     for key in keys:
         if globals()[key] is var and not key.startswith('_'):

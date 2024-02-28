@@ -17,7 +17,7 @@ def show_image(image: np.ndarray, title=None, size=8,
 
     # для одноканальных изображений:
     rank = len(image.shape)
-    print(f"{ranke = }")
+    print(f"{rank = }")
     if rank == 2 or image.shape[2] == 1:
         options["cmap"] = "gray"
     

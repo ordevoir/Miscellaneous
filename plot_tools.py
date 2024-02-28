@@ -14,6 +14,12 @@ def bgr2rgb(image):
 
 def show_image(image: np.ndarray, title=None, size=8, 
                 facecolor=FACECOLOR, color=FONTCOLOR, **options):
+
+    # для одноканальных изображений:
+    rank = len(image.shape)
+    if rank == 2 or image.shape[2] == 1:
+        options["cmap"] = "gray"
+    
     plt.figure(figsize=(size, size), facecolor=facecolor)
     plt.axis("off")
     plt.title(title, color=color)
@@ -48,6 +54,12 @@ def show_images(images, titles=None, n_cols=2, size=4,
     
     if n_rows == 1:
         for i, img in enumerate(images):
+            
+            # для одноканальных изображений:
+            rank = len(img.shape)
+            if rank == 2 or img.shape[2] == 1:
+                options["cmap"] = "gray"
+
             axes[i].axis("off")
             axes[i].imshow(img, **options)
             if titles:
@@ -55,6 +67,12 @@ def show_images(images, titles=None, n_cols=2, size=4,
 
     else:
         for i, img in enumerate(images):
+
+            # для одноканальных изображений:
+            rank = len(img.shape)
+            if rank == 2 or img.shape[2] == 1:
+                options["cmap"] = "gray"
+
             row, col = divmod(i, n_cols)
 
             axes[row, col].axis("off")

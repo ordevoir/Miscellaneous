@@ -5,6 +5,7 @@ FACECOLOR = "#333"
 FONTCOLOR = "#CCC"
 
 def bgr2rgb(image):
+    """returns image with exchanged 3rd and 1st channels"""
     image_rgb = image.copy()
     for y in range(image_rgb.shape[0]):
         for x in range(image_rgb.shape[1]):
@@ -12,10 +13,14 @@ def bgr2rgb(image):
     return image_rgb
 
 
+# Visualize single image
+# ----------------------
+
 def show_image(image: np.ndarray, title=None, size=8, 
                 facecolor=FACECOLOR, color=FONTCOLOR, **options):
+    """Visualize single RGB or monochromatic image"""
 
-    # для одноканальных изображений:
+    # for 1 channel image:
     rank = len(image.shape)
     print(f"{rank = }")
     if rank == 2 or image.shape[2] == 1:
@@ -27,13 +32,18 @@ def show_image(image: np.ndarray, title=None, size=8,
     plt.imshow(image, **options)
     plt.show()
 
-
 def show_image_bgr(image: np.ndarray, title=None, size=8, 
                    facecolor=FACECOLOR, color=FONTCOLOR, **options):
+    """Visualize single BGR image"""
     show_image(bgr2rgb(image), title, size, facecolor, color, **options)
+
+
+# Visualize multiple images
+# -------------------------
 
 def show_images(images, titles=None, n_cols=2, size=4, 
                 facecolor=FACECOLOR, color=FONTCOLOR, **options):
+    """Visualize multiple RGB or monochromatic images"""
 
     if titles is not None:
         assert len(titles) == len(images), "images count and titles count must be same"
@@ -56,7 +66,7 @@ def show_images(images, titles=None, n_cols=2, size=4,
     if n_rows == 1:
         for i, img in enumerate(images):
             
-            # для одноканальных изображений:
+            # for 1 channel images:
             rank = len(img.shape)
             if rank == 2 or img.shape[2] == 1:
                 options["cmap"] = "gray"
@@ -69,7 +79,7 @@ def show_images(images, titles=None, n_cols=2, size=4,
     else:
         for i, img in enumerate(images):
 
-            # для одноканальных изображений:
+            # for 1 channel images:
             rank = len(img.shape)
             if rank == 2 or img.shape[2] == 1:
                 options["cmap"] = "gray"
@@ -92,6 +102,7 @@ def show_images(images, titles=None, n_cols=2, size=4,
 
 def show_images_bgr(images, titles=None, n_cols=2, size=4, 
                     facecolor=FACECOLOR, color=FONTCOLOR, **options):
+    """Visualize multiple BGR images"""
     images_rgb = []
     for image in images:
         images_rgb.append(bgr2rgb(image))

@@ -24,6 +24,9 @@ def show_image(image: np.ndarray, title=None, size=8,
     rank = len(image.shape)
     if rank == 2 or image.shape[2] == 1:
         options["cmap"] = "gray"
+
+    if not "interpolation" in options.keys():
+        options["interpolation"] = None
     
     plt.figure(figsize=(size, size), facecolor=facecolor)
     plt.axis("off")
@@ -47,6 +50,9 @@ def show_images(images, titles=None, n_cols=2, size=4,
     if titles:
         assert len(titles) == len(images), "images count and titles count must be same"
 
+    if not "interpolation" in options.keys():
+        options["interpolation"] = None
+    
     ratio = images[0].shape[0] / images[0].shape[1]     # height / width
     img_count = len(images)
 

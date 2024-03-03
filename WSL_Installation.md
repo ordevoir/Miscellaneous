@@ -21,19 +21,8 @@ wsl --install
 ```bash
 wsl --install -d Ubuntu-22.04
 ```
-Для того, чтобы проверить, какой дистрибутив установлен, можно воспользоваться коммандами:
-```bash
-lsb_release -a
-```
-или
-```bash
-cat /etc/os-release
-```
-
-
 
 Список доступных дистрибутивов можно посмотреть так:
-
 
 ```bash
 wsl --list --online
@@ -42,6 +31,15 @@ wsl --list --online
 > При возникновении ошибки Error 0x80370102 один из вариантов исправить – переключиться на WSL1:
 >
 > `wsl --set-default-version 1`
+
+Для того, чтобы проверить, какой дистрибутив установлен, можно воспользоваться коммандами:
+```bash
+lsb_release -a
+```
+или
+```bash
+cat /etc/os-release
+```
 
 # [VS Code в WSL](https://learn.microsoft.com/en-us/windows/wsl/tutorials/wsl-vscode)
 

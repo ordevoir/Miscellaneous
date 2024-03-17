@@ -54,7 +54,7 @@
 
 ## Сreate environments with **virtualenv**
 
-`pip inatall virtualenv`
+`pip install virtualenv`
 
 Create a new virtual environment by choosing a Python interpreter and making a `.\venv` directory to hold it:
 

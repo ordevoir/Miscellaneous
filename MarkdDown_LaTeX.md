@@ -32,7 +32,11 @@
 
 $ \in $ – `\in`<br>
 $ \owns $ – `\owns`<br>
-$ \sim $ – `\sim`
+$ \sim $ – `\sim` <br>
+$ \rightarrow $ – `\to`, `\rightarrow` <br>
+$ \leftarrow $ – `\leftarrow` <br>
+$ \downarrow $ – `\downarrow` <br>
+$ \uparrow $ – `\uparrow` <br>
 
 # Варианты стилизации буквы
 
@@ -64,6 +68,25 @@ $A \quad B$ – `A \quad B` <br>
 $A \qquad B$ – `A \qquad B` <br>
 $A \hspace{0.5em} B$ – `A \hspace{0.5em} B` <br>
 
+# Многоточия
+
+$x_1 + \ldots + x_n$ – `\ldots`
+
+$x_1 + \cdots + x_n$ – `\dots`, `\cdots`
+ 
+$x_1 + \ddots + x_n$ – `\ddots`
+
+$x_1 \quad \vdots \quad x_n$ – `\vdots`
+
+$$
+\begin{bmatrix}
+a_{11} & a_{12} & \cdots & a_{1n} \\
+a_{21} & a_{22} & \cdots & a_{2n} \\
+\vdots & \vdots & \ddots & \vdots \\
+a_{n1} & a_{n2} & \cdots & a_{nn}
+\end{bmatrix}
+$$
+
 # Разное
 
 Cкобки, высота которых соответствует содержимому:
@@ -78,4 +101,12 @@ $$
 
 $$
 \left\{  \sum_{i=1}^n x_i \right\}
+$$
+
+$$
+\left\lfloor \frac{x}{y} \right\rfloor\
+$$
+
+$$
+\left\lceil \frac{x}{y} \right\rceil\
 $$

@@ -37,6 +37,14 @@ $ \rightarrow $ – `\to`, `\rightarrow` <br>
 $ \leftarrow $ – `\leftarrow` <br>
 $ \downarrow $ – `\downarrow` <br>
 $ \uparrow $ – `\uparrow` <br>
+$ \leftrightarrow $ – `\leftrightarrow` <br>
+$ \updownarrow $ – `\updownarrow` <br>
+$ \circ $ – `\circ` <br>
+$ \cdot \space$ – `\cdot` <br> 
+$ \dot{x} $ – `\dot{x}` <br> 
+$ \ddot{x} $ – `\ddot{x}` <br> 
+
+
 
 # Варианты стилизации буквы
 
